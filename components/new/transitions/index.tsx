@@ -18,6 +18,7 @@ export default function FramerMotion({
   return (
     // <AnimatePresence>
     <motion.div
+      // layout
       variants={variantsData}
       initial="start"
       animate="stop"

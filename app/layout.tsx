@@ -1,14 +1,13 @@
 "use client";
-import "./globals.css";
-import "./data-tables-css.css";
-import "./satoshi.css";
-import { useState, useEffect } from "react";
 import Loader from "@/components/common/Loader";
+import { useEffect, useState } from "react";
+import "./data-tables-css.css";
+import "./globals.css";
+import "./satoshi.css";
 
-import Sidebar from "@/components/Sidebar";
 import Header from "@/components/Header";
+import Sidebar from "@/components/Sidebar";
 import FramerMotion from "@/components/new/transitions";
-import { AnimatePresence } from "framer-motion";
 
 export default function RootLayout({
   children,
