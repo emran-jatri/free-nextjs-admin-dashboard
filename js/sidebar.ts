@@ -1,10 +1,13 @@
+import AuthIcon from "@/components/Svgs/AuthIcon";
 import CalenderIcon from "@/components/Svgs/CalenderIcon";
+import ChatIcon from "@/components/Svgs/ChatIcon";
 import DashboardIcon from "@/components/Svgs/DashboardIcon";
 import DownArrowIcon from "@/components/Svgs/DownArrowIcon";
 import FormIcon from "@/components/Svgs/FormIcon";
 import ProfileIcon from "@/components/Svgs/ProfileIcon";
 import SettingsIcon from "@/components/Svgs/SettingsIcon";
 import TableIcon from "@/components/Svgs/TableIcon";
+import UiElementsIcon from "@/components/Svgs/UiElementsIcon";
 
 export const sidebarData = [
   {
@@ -44,7 +47,7 @@ export const sidebarData = [
         title: "Forms",
         leftIcon: FormIcon,
         rightIcon: DownArrowIcon,
-        path: "forms",
+        path: "/forms",
         levelTwoItems: [
           {
             key: "loi_10401",
@@ -74,55 +77,55 @@ export const sidebarData = [
       },
     ],
   },
-  // {
-  //   key: "sbi_2",
-  //   title: "OTHERS",
-  //   levelOneItems: [
-  //     {
-  //       key: "loi_201",
-  //       title: "Chart",
-  //       leftIcon: "leftIcon",
-  //       rightIcon: "rightIcon",
-  //       path: "/chart",
-  //     },
-  //     {
-  //       key: "loi_202",
-  //       title: "UI Elements",
-  //       leftIcon: "leftIcon",
-  //       rightIcon: "rightIcon",
-  //       path: null,
-  //       levelTwoItems: [
-  //         {
-  //           key: "loi_20201",
-  //           title: "Alert",
-  //           path: "/ui/alerts",
-  //         },
-  //         {
-  //           key: "loi_20202",
-  //           title: "Buttons",
-  //           path: "/ui/buttons",
-  //         },
-  //       ],
-  //     },
-  //     {
-  //       key: "loi_203",
-  //       title: "Authentication",
-  //       leftIcon: "leftIcon",
-  //       rightIcon: "rightIcon",
-  //       path: null,
-  //       levelTwoItems: [
-  //         {
-  //           key: "loi_20301",
-  //           title: "Sign In",
-  //           path: "/auth/signin",
-  //         },
-  //         {
-  //           key: "loi_20302",
-  //           title: "Sign Up",
-  //           path: "/auth/signup",
-  //         },
-  //       ],
-  //     },
-  //   ],
-  // },
+  {
+    key: "sbi_2",
+    title: "OTHERS",
+    levelOneItems: [
+      {
+        key: "loi_201",
+        title: "Chart",
+        leftIcon: ChatIcon,
+        rightIcon: null,
+        path: "/chart",
+      },
+      {
+        key: "loi_202",
+        title: "UI Elements",
+        leftIcon: UiElementsIcon,
+        rightIcon: DownArrowIcon,
+        path: "/ui",
+        levelTwoItems: [
+          {
+            key: "loi_20201",
+            title: "Alert",
+            path: "/ui/alerts",
+          },
+          {
+            key: "loi_20202",
+            title: "Buttons",
+            path: "/ui/buttons",
+          },
+        ],
+      },
+      {
+        key: "loi_203",
+        title: "Authentication",
+        leftIcon: AuthIcon,
+        rightIcon: DownArrowIcon,
+        path: "/auth",
+        levelTwoItems: [
+          {
+            key: "loi_20301",
+            title: "Sign In",
+            path: "/auth/signin",
+          },
+          {
+            key: "loi_20302",
+            title: "Sign Up",
+            path: "/auth/signup",
+          },
+        ],
+      },
+    ],
+  },
 ];

@@ -108,7 +108,8 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                       <SidebarLinkGroup
                         activeCondition={
                           pathname === levelOneItem.path ||
-                          pathname.includes(levelOneItem.title?.toLowerCase())
+                          (levelOneItem.path !== "/" &&
+                            pathname.includes(levelOneItem.path))
                         }
                       >
                         {(handleClick, open) => {
@@ -118,9 +119,8 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                                 href="#"
                                 className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
                                   (pathname === levelOneItem.path ||
-                                    pathname.includes(
-                                      levelOneItem.title?.toLowerCase()
-                                    )) &&
+                                    (levelOneItem.path !== "/" &&
+                                      pathname.includes(levelOneItem.path))) &&
                                   "bg-graydark dark:bg-meta-4"
                                 }`}
                                 onClick={(e) => {
