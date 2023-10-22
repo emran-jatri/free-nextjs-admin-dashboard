@@ -17,10 +17,6 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
   const trigger = useRef<any>(null);
   const sidebar = useRef<any>(null);
   const sidebarItems = sidebarData;
-  console.log(
-    "🚀 ~ file: index.tsx:20 ~ Sidebar ~ sidebarItems:",
-    sidebarItems
-  );
 
   let storedSidebarExpanded = "true";
   const [sidebarExpanded, setSidebarExpanded] = useState(
