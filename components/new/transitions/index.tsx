@@ -2,7 +2,7 @@ import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const variants = {
-  start: { opacity: 0, x: 0, y: -500 },
+  start: { opacity: 0, x: 0, y: -100 },
   stop: { opacity: 1, x: 0, y: 0 },
 };
 

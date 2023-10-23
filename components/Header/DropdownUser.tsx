@@ -66,17 +66,14 @@ const DropdownUser = () => {
 
       {/* <!-- Dropdown Start --> */}
       {dropdownOpen && (
-        <FramerMotion
-          variantsData={{
-            start: { opacity: 0, x: 0, y: -100 },
-            stop: { opacity: 1, x: 0, y: 0 },
-          }}
-        >
+        <FramerMotion>
           <div
             ref={dropdown}
             onFocus={() => setDropdownOpen(true)}
             onBlur={() => setDropdownOpen(false)}
-            className={`absolute right-0 mt-4 flex w-62.5 flex-col rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark 
+            className={`absolute right-0 mt-4 flex w-62.5 flex-col rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark ${
+              dropdownOpen === true ? "block" : "hidden"
+            }
          
           `}
           >
