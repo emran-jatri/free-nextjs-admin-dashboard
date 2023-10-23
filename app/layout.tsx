@@ -49,7 +49,7 @@ export default function RootLayout({
 
                   {/* <!-- ===== Main Content Start ===== --> */}
                   <main>
-                    <div className=" h-[calc(100vh_-_80px)] bg-whiten dark:bg-boxdark-2 rounded-tl-3xl shadow-inner file:mx-auto p-4 md:p-6 2xl:p-10 overflow-y-auto">
+                    <div className=" h-[calc(100vh_-_80px)] bg-whiten dark:bg-boxdark-2 rounded-tl-3xl shadow-inner file:mx-auto p-4 md:p-6 2xl:p-10 overflow-hidden overflow-y-auto">
                       {children}
                     </div>
                   </main>
