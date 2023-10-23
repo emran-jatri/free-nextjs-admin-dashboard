@@ -49,7 +49,7 @@ export default function RootLayout({
 
                   {/* <!-- ===== Main Content Start ===== --> */}
                   <main>
-                    <div className=" h-[calc(100vh_-_80px)] bg-whiten dark:bg-boxdark-2 rounded-tl-3xl shadow-inner file:mx-auto p-4 md:p-6 2xl:p-10 overflow-hidden overflow-y-auto scrollbar scrollbar-w-3 scrollbar-thumb-rounded-full scrollbar-thumb-boxdark dark:scrollbar-thumb-whiter">
+                    <div className=" h-[calc(100vh_-_80px)] bg-whiten dark:bg-boxdark-2 lg:rounded-tl-3xl shadow-inner file:mx-auto p-4 md:p-6 2xl:p-10 overflow-hidden overflow-y-auto scrollbar lg:scrollbar-w-3 lg:scrollbar-thumb-rounded-full lg:scrollbar-thumb-boxdark dark:lg:scrollbar-thumb-whiter">
                       {children}
                     </div>
                   </main>
