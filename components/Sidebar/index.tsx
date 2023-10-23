@@ -126,11 +126,11 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                             <Fragment>
                               <Link
                                 href="#"
-                                className={`rounded-r-full group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-black dark:text-bodydark1 duration-300 ease-in-out hover:text-bodydark1 hover:bg-graydark dark:hover:bg-meta-4 ${
+                                className={`rounded-r-full group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-black dark:text-bodydark1 duration-300 ease-in-out hover:text-bodydark1 hover:bg-primary  ${
                                   (pathname === levelOneItem.path ||
                                     (levelOneItem.path !== "/" &&
                                       pathname.includes(levelOneItem.path))) &&
-                                  "text-bodydark1 bg-graydark dark:bg-meta-4"
+                                  "text-bodydark1 bg-primary"
                                 }`}
                                 onClick={(e) => {
                                   e.preventDefault();
@@ -184,10 +184,10 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                       <li>
                         <Link
                           href={levelOneItem.path}
-                          className={`rounded-r-full group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-black dark:text-whiten duration-300 ease-in-out hover:text-whiten hover:bg-graydark dark:hover:bg-meta-4 ${
+                          className={`rounded-r-full group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-black dark:text-whiten duration-300 ease-in-out hover:text-whiten hover:bg-primary  ${
                             pathname.includes(
                               levelOneItem.title?.toLowerCase()
-                            ) && "text-whiten bg-graydark dark:bg-meta-4"
+                            ) && "text-whiten bg-primary"
                           }`}
                         >
                           <levelOneItem.leftIcon />
