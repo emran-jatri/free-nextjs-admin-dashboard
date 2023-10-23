@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import React, { Fragment, useEffect, useRef, useState } from "react";
 import LeftArrow from "../Svgs/LeftArrow";
 import SidebarLinkGroup from "./SidebarLinkGroup";
+import FramerMotion from "../new/transitions";
 
 interface SidebarProps {
   sidebarOpen: boolean;
@@ -144,27 +145,35 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                               </Link>
                               {/* <!-- Dropdown Menu Start --> */}
                               <div
-                                className={`translate transform overflow-hidden ${
-                                  !open && "hidden"
-                                }`}
+                                className={`translate transform overflow-hidden`}
                               >
-                                <ul className="mt-4 mb-5.5 flex flex-col gap-2.5 pl-6">
-                                  {levelOneItem.levelTwoItems?.map(
-                                    (levelTwoItem) => (
-                                      <li key={levelTwoItem.key}>
-                                        <Link
-                                          href={levelTwoItem.path}
-                                          className={`group relative flex items-center gap-2.5 px-4 font-medium text-body dark:text-bodydark2 duration-300 ease-in-out hover:border-l-2 hover:text-boxdark dark:hover:text-whiten ${
-                                            pathname === levelTwoItem.path &&
-                                            "border-l-2 text-boxdark dark:text-whiten"
-                                          } `}
-                                        >
-                                          {levelTwoItem.title}
-                                        </Link>
-                                      </li>
-                                    )
-                                  )}
-                                </ul>
+                                {open && (
+                                  <FramerMotion
+                                    variantsData={{
+                                      start: { opacity: 0, x: 0, y: -100 },
+                                      stop: { opacity: 1, x: 0, y: 0 },
+                                    }}
+                                  >
+                                    <ul className="mt-4 mb-5.5 flex flex-col gap-2.5 pl-6">
+                                      {levelOneItem.levelTwoItems?.map(
+                                        (levelTwoItem) => (
+                                          <li key={levelTwoItem.key}>
+                                            <Link
+                                              href={levelTwoItem.path}
+                                              className={`group relative flex items-center gap-2.5 px-4 font-medium text-body dark:text-bodydark2 duration-300 ease-in-out hover:border-l-2 hover:text-boxdark dark:hover:text-whiten ${
+                                                pathname ===
+                                                  levelTwoItem.path &&
+                                                "border-l-2 text-boxdark dark:text-whiten"
+                                              } `}
+                                            >
+                                              {levelTwoItem.title}
+                                            </Link>
+                                          </li>
+                                        )
+                                      )}
+                                    </ul>
+                                  </FramerMotion>
+                                )}
                               </div>
                               {/* <!-- Dropdown Menu End --> */}
                             </Fragment>
