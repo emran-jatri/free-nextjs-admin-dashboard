@@ -106,7 +106,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
           {/* <!-- Menu Group --> */}
           {sidebarItems.map((sidebarItem) => (
             <div key={sidebarItem.key}>
-              <h3 className="mb-4 ml-4 text-sm font-semibold text-black-2 dark:text-bodydark2">
+              <h3 className="mb-4 ml-4 text-sm font-semibold text-black-2 dark:text-white">
                 {sidebarItem.title}
               </h3>
               <ul className="mb-6 flex flex-col gap-1.5">
@@ -154,7 +154,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                                       <li key={levelTwoItem.key}>
                                         <Link
                                           href={levelTwoItem.path}
-                                          className={`group relative flex items-center gap-2.5 px-4 font-medium text-body dark:text-bodydark2 duration-300 ease-in-out hover:border-l-2 hover:text-boxdark dark:hover:text-bodydark1 ${
+                                          className={`group relative flex items-center gap-2.5 px-4 font-medium text-body dark:text-bodydark2 duration-300 ease-in-out hover:border-l-2 hover:text-boxdark dark:hover:text-whiten ${
                                             pathname === levelTwoItem.path &&
                                             "border-l-2 text-boxdark dark:text-whiten"
                                           } `}
