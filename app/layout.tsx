@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body suppressHydrationWarning={true}>
-        <div className="dark:bg-boxdark-2 dark:text-bodydark">
+        <div className=" dark:bg-boxdark dark:text-bodydark">
           {loading ? (
             <Loader />
           ) : (
@@ -49,7 +49,7 @@ export default function RootLayout({
 
                   {/* <!-- ===== Main Content Start ===== --> */}
                   <main>
-                    <div className="mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">
+                    <div className=" bg-whiten dark:bg-boxdark-2 rounded-tl-3xl shadow-inner file:mx-auto p-4 md:p-6 2xl:p-10">
                       {children}
                     </div>
                   </main>

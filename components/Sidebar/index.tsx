@@ -65,17 +65,25 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
   return (
     <aside
       ref={sidebar}
-      className={`absolute left-0 top-0 z-9999 flex h-screen w-72.5 flex-col overflow-y-hidden bg-black duration-300 ease-linear dark:bg-boxdark lg:static lg:translate-x-0 ${
+      className={`absolute left-0 top-0 z-9999 flex h-screen w-72.5 flex-col overflow-y-hidden bg-white transition-transform duration-300 ease-linear dark:bg-boxdark lg:static lg:translate-x-0 ${
         sidebarOpen ? "translate-x-0" : "-translate-x-full"
       }`}
     >
       {/* <!-- SIDEBAR HEADER --> */}
       <div className="flex items-center justify-between gap-2 px-6 py-5.5 lg:py-6.5">
-        <Link href="/">
+        <Link href="/" className="hidden dark:block">
           <Image
             width={176}
             height={32}
             src={"/images/logo/logo.svg"}
+            alt="Logo"
+          />
+        </Link>
+        <Link href="/" className="dark:hidden">
+          <Image
+            width={176}
+            height={32}
+            src={"/images/logo/logo-dark.svg"}
             alt="Logo"
           />
         </Link>
@@ -98,7 +106,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
           {/* <!-- Menu Group --> */}
           {sidebarItems.map((sidebarItem) => (
             <div key={sidebarItem.key}>
-              <h3 className="mb-4 ml-4 text-sm font-semibold text-bodydark2">
+              <h3 className="mb-4 ml-4 text-sm font-semibold text-black-2 dark:text-bodydark2">
                 {sidebarItem.title}
               </h3>
               <ul className="mb-6 flex flex-col gap-1.5">
@@ -117,11 +125,11 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                             <Fragment>
                               <Link
                                 href="#"
-                                className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
+                                className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-black dark:text-bodydark1 duration-300 ease-in-out hover:text-bodydark1 hover:bg-graydark dark:hover:bg-meta-4 ${
                                   (pathname === levelOneItem.path ||
                                     (levelOneItem.path !== "/" &&
                                       pathname.includes(levelOneItem.path))) &&
-                                  "bg-graydark dark:bg-meta-4"
+                                  "text-bodydark1 bg-graydark dark:bg-meta-4"
                                 }`}
                                 onClick={(e) => {
                                   e.preventDefault();
@@ -146,9 +154,9 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                                       <li key={levelTwoItem.key}>
                                         <Link
                                           href={levelTwoItem.path}
-                                          className={`group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white ${
+                                          className={`group relative flex items-center gap-2.5 px-4 font-medium text-body dark:text-bodydark2 duration-300 ease-in-out hover:border-l-2 hover:text-boxdark dark:hover:text-bodydark1 ${
                                             pathname === levelTwoItem.path &&
-                                            "text-white"
+                                            "border-l-2 text-boxdark dark:text-whiten"
                                           } `}
                                         >
                                           {levelTwoItem.title}
@@ -167,10 +175,10 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                       <li>
                         <Link
                           href={levelOneItem.path}
-                          className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
+                          className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-black dark:text-whiten duration-300 ease-in-out hover:text-whiten hover:bg-graydark dark:hover:bg-meta-4 ${
                             pathname.includes(
                               levelOneItem.title?.toLowerCase()
-                            ) && "bg-graydark dark:bg-meta-4"
+                            ) && "text-whiten bg-graydark dark:bg-meta-4"
                           }`}
                         >
                           <levelOneItem.leftIcon />
