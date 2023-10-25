@@ -160,10 +160,10 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                                           <li key={levelTwoItem.key}>
                                             <Link
                                               href={levelTwoItem.path}
-                                              className={`group relative flex items-center gap-2.5 px-4 font-medium text-body dark:text-bodydark2 duration-200 ease-in-out hover:text-boxdark dark:hover:text-whiten ${
+                                              className={`group relative flex items-center gap-2.5 px-4 font-medium text-body dark:text-bodydark2 duration-300 ease-in-out hover:border-l-2 hover:text-boxdark dark:hover:text-whiten ${
                                                 pathname ===
                                                   levelTwoItem.path &&
-                                                "border-l-3 text-boxdark dark:text-whiten"
+                                                "border-l-2 text-boxdark dark:text-whiten"
                                               } `}
                                             >
                                               {levelTwoItem.title}
