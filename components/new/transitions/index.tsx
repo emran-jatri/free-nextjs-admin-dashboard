@@ -1,5 +1,5 @@
+import { motion, useScroll, useSpring } from "framer-motion";
 import React from "react";
-import { AnimatePresence, motion } from "framer-motion";
 
 const variants = {
   start: { opacity: 0, x: 0, y: -100 },
@@ -29,3 +29,12 @@ export default function FramerMotion({
     // </AnimatePresence>
   );
 }
+
+export const ScrollYProgress = ({ style }: { style: any }) => {
+  return (
+    <motion.div
+      className="fixed top-0 left-0 right-0 h-3 bg-primary origin-[0%] z-999999"
+      style={{ ...style }}
+    />
+  );
+};
