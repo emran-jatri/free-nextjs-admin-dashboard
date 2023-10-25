@@ -11,6 +11,10 @@ export default function Home() {
   return (
     <>
       <ECommerce />
+      <ECommerce />
+      <ECommerce />
+      <ECommerce />
+      <ECommerce />
     </>
   );
 }
