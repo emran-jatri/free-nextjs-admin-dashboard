@@ -132,6 +132,7 @@ const DropdownMessage = () => {
                       height={112}
                       src={"/images/user/user-01.png"}
                       alt="User"
+                      className="w-auto h-auto"
                     />
                   </div>
 

@@ -17,14 +17,14 @@ export default function RootLayout({
 }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [loading, setLoading] = useState<boolean>(true);
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    container: ref,
-  });
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 200,
-    damping: 50,
-  });
+  // const ref = useRef(null);
+  // const { scrollYProgress } = useScroll({
+  //   container: ref,
+  // });
+  // const scaleX = useSpring(scrollYProgress, {
+  //   stiffness: 200,
+  //   damping: 50,
+  // });
 
   useEffect(() => {
     setTimeout(() => setLoading(false), 1000);
@@ -38,10 +38,10 @@ export default function RootLayout({
             <Loader />
           ) : (
             <>
-              <motion.div
+              {/* <motion.div
                 className="h-3 bg-primary fixed top-0 left-0 right-0 origin-[0%] z-999999"
                 style={{ scaleX }}
-              />
+              /> */}
               <FramerMotion>
                 <div className="flex h-screen overflow-hidden">
                   {/* <!-- ===== Sidebar Start ===== --> */}
@@ -63,7 +63,7 @@ export default function RootLayout({
                     {/* <!-- ===== Main Content Start ===== --> */}
                     <main>
                       <div
-                        ref={ref}
+                        // ref={ref}
                         className=" h-[calc(100vh_-_80px)] bg-whiten dark:bg-boxdark-2 lg:rounded-tl-3xl shadow-inner file:mx-auto p-4 md:p-6 2xl:p-10 overflow-hidden overflow-y-auto scrollbar lg:scrollbar-w-3 lg:scrollbar-thumb-rounded-full lg:scrollbar-thumb-boxdark dark:lg:scrollbar-thumb-whiter"
                       >
                         {children}

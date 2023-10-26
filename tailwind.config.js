@@ -215,7 +215,7 @@ module.exports = {
       content: {
         "icon-copy": 'url("../images/icon/icon-copy-alt.svg")',
       },
-      transitionProperty: { width: "width", height: 'height', stroke: "stroke" },
+      transitionProperty: { width: "width", height: 'height', stroke: "stroke", spacing: 'margin, padding', },
       borderWidth: {
         3: "3px",
         6: "6px",
